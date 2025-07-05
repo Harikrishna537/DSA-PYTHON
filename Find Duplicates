@@ -1,0 +1,16 @@
+def duplicates(arr):
+    freMap={}
+    result=[]
+    for num in arr:
+        freMap[num]=freMap.get(num,0)+1
+    for key,value in freMap.items():
+        if value>1:
+            result.append(key)
+    if not result:
+        result.append(-1)
+    return result
+arr=[1,2,3,4,3,5,6,5]
+dup=duplicates(arr)
+for element in dup:
+    print(element,end=" ")
+        
